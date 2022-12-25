@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>Asistente Virtual</title>
+</head>
+<body>
+  <h1>Asistente Virtual</h1>
+  <p>Hola, soy un asistente virtual. ¿En qué puedo ayudarte hoy?</p>
+  <form>
+    <label for="pregunta1">¿Cuál es tu nombre?</label><br>
+    <input type="text" id="pregunta1" name="pregunta1"><br>
+    <label for="pregunta2">¿De dónde eres?</label><br>
+    <input type="text" id="pregunta2" name="pregunta2"><br>
+    <label for="pregunta3">¿Cuál es tu profesión?</label><br>
+    <input type="text" id="pregunta3" name="pregunta3"><br>
+    <label for="pregunta4">¿Cuál es tu pasatiempo favorito?</label><br>
+    <input type="text" id="pregunta4" name="pregunta4"><br>
+    <label for="pregunta5">¿Tienes alguna pregunta o necesitas ayuda con algo específico?</label><br>
+    <input type="text" id="pregunta5" name="pregunta5"><br>
+    <br>
+    <input type="submit" value="Enviar" onclick="mostrarRespuestas()">
+  </form> 
+  <br>
+  <p>Gracias por tus respuestas. Aquí tienes mis respuestas predefinidas:</p>
+  <p>Hola <strong id="nombre">[Nombre]</strong>, es un placer conocerte. Soy un asistente virtual y no tengo un lugar de origen en el sentido tradicional, pero estoy programadopara ayudarte con tus preguntas y necesidades. Mi profesión es <strong id="profesion">[Profesión]</strong>, y mi pasatiempo favorito es <strong id="pasatiempo">[Pasatiempo]</strong>. Si necesitas ayuda con algo en particular, estaré encantado de hacer todo lo posible para ayudarte. ¡Gracias por preguntar!</p>
+  <p>Además, según tus respuestas, eres de <strong id="lugar">[Lugar]</strong> y tu pregunta es: <strong id="pregunta">[Pregunta]</strong></p>
+  <script>
+    function mostrarRespuestas() {
+      // Obtener las respuestas del usuario
+      var nombre = document.getElementById("pregunta1").value;
+      var lugar = document.getElementById("pregunta2").value;
+      var profesion = document.getElementById("pregunta3").value;
+      var pasatiempo = document.getElementById("pregunta4").value;
+      var pregunta = document.getElementById("pregunta5").value;
+    
+      // Reemplazar las respuestas en la página
+      document.getElementById("nombre").innerHTML = nombre;
+      document.getElementById("lugar").innerHTML = lugar;
+      document.getElementById("profesion").innerHTML = profesion;
+      document.getElementById("pasatiempo").innerHTML = pasatiempo;
+      document.getElementById("pregunta").innerHTML = pregunta;
+    }
+  </script>
+</body>
+</html>
